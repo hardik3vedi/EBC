@@ -26,7 +26,7 @@ public class MongoDb_Insert {
 	 */
 	public static void main(String[] args) throws UnknownHostException {
 
-		MongoClient mongoClient = new MongoClient("localhost", 27017);
+		MongoClient mongoClient = new MongoClient("192.168.1.24", 27017);
 		System.out.println("Mongo Version : " + mongoClient.getVersion());
 		System.out.println("Mongo Address : " + mongoClient.getAddress());
 
@@ -47,7 +47,7 @@ public class MongoDb_Insert {
 		ObjectMapper mapper = new ObjectMapper();
 		DBObject dbObject = mapper.convertValue(
 				createDBObject(femateDatainfo, true), BasicDBObject.class);
-		//collection.insert(dbObject);
+		collection.insert(dbObject);
 		System.out.println("dbObject :: " + dbObject);
 		System.out.println("Data Inserted Sucessfully...!!!");
 
@@ -55,7 +55,7 @@ public class MongoDb_Insert {
 		BasicDBObject insertData = mapper.convertValue(
 				getInfoCollectionDocument(maleDataInfo, true),
 				BasicDBObject.class);
-		//collection.insert(insertData);
+		collection.insert(insertData);
 		System.out.println("BasicDbObject :: " + insertData);
 		System.out.println("Data Inserted Sucessfully...!!!");
 	}
