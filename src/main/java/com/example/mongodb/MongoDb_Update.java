@@ -20,7 +20,7 @@ public class MongoDb_Update {
 	 */
 	public static void main(String[] args) throws UnknownHostException {
 		System.out.println(">>>>>>>>>>>>>>>>> MongoDb Update Document Example");
-		MongoClient mongoClient = new MongoClient("localhost", 27017);
+		MongoClient mongoClient = new MongoClient("192", 27017);
 		System.out.println("Mongo Version : " + mongoClient.getVersion());
 		System.out.println("Mongo Address : " + mongoClient.getAddress());
 
