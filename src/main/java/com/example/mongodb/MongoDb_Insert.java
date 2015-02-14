@@ -26,7 +26,7 @@ public class MongoDb_Insert {
 	 */
 	public static void main(String[] args) throws UnknownHostException {
 
-		MongoClient mongoClient = new MongoClient("192.168.1.24", 27017);
+		MongoClient mongoClient = new MongoClient("localhost", 27017);
 		System.out.println("Mongo Version : " + mongoClient.getVersion());
 		System.out.println("Mongo Address : " + mongoClient.getAddress());
 

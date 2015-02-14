@@ -16,9 +16,14 @@ public class MongoDb_Connection {
 	 * @param args
 	 * @throws UnknownHostException
 	 */
+	/**
+	 * @param args
+	 * @throws UnknownHostException
+	 */
 	public static void main(String[] args) throws UnknownHostException {
 
 		MongoClient mongoClient = new MongoClient("localhost", 27017);
+		
 		System.out.println("Mongo Version : " + mongoClient.getVersion());
 		System.out.println("Mongo Address : " + mongoClient.getAddress());
 
